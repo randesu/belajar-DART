@@ -51,12 +51,48 @@ class _MyHomePageState extends State<MyHomePage> {
         
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         
-        title: Text(widget.title, style: TextStyle(color: Colors.blue,fontSize: 20,fontWeight: FontWeight.bold,),),
+        title: Text(widget.title, 
+        style: TextStyle(
+          color: Colors.blue,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          fontStyle: FontStyle.normal,
+          letterSpacing: 10,
+          background: Paint(),
+          decoration: TextDecoration.lineThrough,
+          decorationColor: Color.fromARGB(255, 255, 0, 0),
+          decorationStyle: TextDecorationStyle.dashed,
+          decorationThickness: 3,
+          fontFamily: 'Roboto',
+          fontFamilyFallback: ['Roboto'],
+          height : 2,
+          overflow: TextOverflow.clip,
+          shadows: [Shadow(color: Colors.black, offset: Offset.zero, blurRadius: 5)],
+          wordSpacing: 5,
+
+          ),
+          strutStyle: StrutStyle(),
+          textAlign: TextAlign.center,
+          textDirection: TextDirection.ltr,
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          textScaler: TextScaler.noScaling,
+          maxLines: 3,
+          semanticsLabel: "mobile app",
+          textWidthBasis: TextWidthBasis.parent,
+          textHeightBehavior: TextHeightBehavior(),
+          selectionColor: Colors.black,
+
+          ),
       ),
       body: Center(
         
         child: Column(
-          
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          textDirection: TextDirection.ltr,
+          verticalDirection: VerticalDirection.down,
+          textBaseline: TextBaseline.alphabetic,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
@@ -73,6 +109,19 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
+        autofocus: false,
+        backgroundColor: Colors.white,
+        clipBehavior: Clip.none,
+        focusColor: Colors.white,
+        hoverColor: Colors.red,
+        splashColor: Colors.yellow,
+        elevation: 2,
+        focusElevation: 5,
+        hoverElevation: 5,
+        highlightElevation: 5,
+        
+
+        
       ), 
     );
   }
